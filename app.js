@@ -6,7 +6,8 @@ dotenv.config();
 const express = require('express');
 
 const indexRouter = require('./src/routes/routes-index');
-/* const menuRouter = require('./src/routes/routes-menu');
+const menuRouter = require('./src/routes/routes-menu');
+/*
 const contactoRouter = require('./src/routes/routes-contacto');
 const nosotrosRouter = require('./src/routes/routes-nosotros');
 const ayudaRouter = require('./src/routes/routes-ayuda');
@@ -32,8 +33,8 @@ app.set('views', path.join(__dirname, 'src/views')) */
 }) */
 
 app.use('/index', indexRouter);
-/*
 app.use('/menu', menuRouter);
+/*
 app.use('/contacto', contactoRouter);
 app.use('/nosotros', nosotrosRouter);
 app.use('/ayuda', ayudaRouter);
