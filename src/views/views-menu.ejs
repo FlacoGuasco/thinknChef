@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+</head>
+<body>
+    <h1>MENU</h1>
+    <section class="menu">
+        <table>
+            <tr>
+                <th><h3>Menú</h3></th>
+                <th><h3>Estación</h3></th>
+                <th><h3>Tipo</h3></th>
+            </tr>
+            <%  menus.forEach(menu => { %>
+                <tr>
+                    <td><%= menu.nom_menu %></td>
+                    <td><%= menu.nom_estacion %></td>
+                    <td><%= menu.descripcion %></td>
+                </tr>
+            <% }) %> 
+        </table>
+    </section>
+</body>
+</html>

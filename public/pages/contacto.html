@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es" style="margin: 0; padding: 0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../style/style.css">
+
+    <!-- Agregados Favicon y Logo -->
+    <!-- <link rel="icon" href="./img/favicon_io/favicon-32x32.png"> -->
+    <link rel="icon" href="/img/faviconio-logo/logo.svg">
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    
+    <title>Contacto</title>
+  </head>
+  <body class="container-body">
+    <!-- Inicio de NavBar -->
+    <header id="header-content"></header>
+    <!-- Fin de NavBar -->
+
+    <!-- Inicio de contacto -->
+    <div class="container-contact-form">
+        <h1>Dejanos tus datos</h1>
+        <form action="https://formsubmit.co/cce88b0aa69a314575730415ff95e9f4" method="POST" id="contact-form">
+          <fieldset>
+            <legend><b>Formulario de contacto:</b></legend>
+            <br>
+            <label for="nombre"> Nombres: (*) 
+              <input type="text" name= "nombre" id="nombre" placeholder="Escriba su nombre..." required>
+            </label>
+            <br>
+            <label for="apellido"> Apellido: (*) 
+              <input type="text" name="apellido" id="apellido" placeholder="Escriba su apellido..." required>
+            </label>
+            <br>
+            <label for="correo"> Correo: (*)
+              <input type="email" name="email" id="email" placeholder="Escriba su correo..." required>
+            </label>
+            <br>
+            <small>(*) Campos Obligatorios </small>
+            <small id="texto-oculto">El correo ingresado no es válido</small>
+          </fieldset>
+          <br>
+          <fieldset>
+            <legend><b>Comentarios: </b><small>(Opcional)</small></legend> 
+            <label for="comentarios">
+              <textarea name="comentarios" id="comentarios" cols="30" rows="10" placeholder="Escriba su consuslta o comentario..."></textarea>
+             </label>
+          </fieldset>
+          <br>
+          <div class="buttons">
+            <input type="submit" value="Enviar comentario" class="btn btn-primary btn-input" disabled id="enviar-contacto">
+            <input type="reset" value="Borrar campos" class="btn btn-primary btn-input" disabled id="resetear">
+          </div>
+
+          <input type="hidden" name="_next" value="https://master--menumensual.netlify.app/">
+          <input type="hidden" name="_captcha" value="false">
+
+        </form>
+    </div>  
+    <!-- Fin de contacto -->
+
+
+    <!-- Inicio del pie -->
+    <footer id="footer-content"></footer>
+    <!-- Fin del pie -->
+    
+    <!-- Inicio de JS -->
+    <script src="../js/script-contacto.js"></script>
+    <script src="../js/header.js"></script>
+    <script src="../js/menu-hamburguesa.js"></script>
+    <!-- Fin de JS -->
+  </body>
+</html>
