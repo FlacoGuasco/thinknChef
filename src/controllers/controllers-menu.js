@@ -1,10 +1,10 @@
-/* const db = require('../config/db-config'); */
+const db = require('../config/db-config');
 
 //El módulo Path nos permite resolver rutas absolutas
 const path = require('path');
 const menu = (req, res) => res.sendFile(path.resolve(__dirname, '../../public/pages/menu.html'));
 
-/* const getAllMenus = (req, res) => {
+const getAllMenus = (req, res) => {
     const sql = 'SELECT nom_menu, nom_estacion, descripcion FROM menus m, estaciones e, tipo_comidas tc WHERE m.id_estacion = e.id_estacion AND m.id_tipo_comida = tc.id_tipo_comida';
     db.query(sql, (err, menus) => {
         if(err) throw err;
@@ -49,5 +49,4 @@ const deleteMenu = (req, res) => {
     });
 };
 
-module.exports = { getAllMenus, getMenuById, menu, createMenu, updateMenu, deleteMenu }; */
-module.exports = { menu };
+module.exports = { getAllMenus, getMenuById, menu, createMenu, updateMenu, deleteMenu };
