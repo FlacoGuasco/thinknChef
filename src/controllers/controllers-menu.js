@@ -1,4 +1,4 @@
-const db = require('../config/db-config');
+/* const db = require('../config/db-config'); */
 
 //El módulo Path nos permite resolver rutas absolutas
 const path = require('path');
