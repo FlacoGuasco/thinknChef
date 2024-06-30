@@ -5,13 +5,13 @@ dotenv.config();
 //Llamamos a la función que contiene un objeto "express"
 const express = require('express');
 
-/* const menuRouter = require('./src/routes/routes-menu');
+const menuRouter = require('./src/routes/routes-menu');
 const contactoRouter = require('./src/routes/routes-contacto');
 const nosotrosRouter = require('./src/routes/routes-nosotros');
 const ayudaRouter = require('./src/routes/routes-ayuda');
 const loginRouter = require('./src/routes/routes.login');
 const indexRouter = require('./src/routes/routes-index');
-const error404Router = require('./src/routes/routes-error404'); */
+const error404Router = require('./src/routes/routes-error404');
 
 // Instanciamos la función del objeto express
 const app = express();
@@ -23,20 +23,20 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Usamos el motor de vistas EJS y le indicamos la carpeta donde estan las vistas a usar
-/* app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'src/views'))*/
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'src/views'))
 
 app.use('/', (req, res) => {
     res.send('Todo funcionando OK.')
 })
-/*
+
 app.use('/menu', menuRouter);
 app.use('/contacto', contactoRouter);
 app.use('/nosotros', nosotrosRouter);
 app.use('/ayuda', ayudaRouter);
 app.use('/login', loginRouter);
 app.use('/index', indexRouter);
-app.use(error404Router); */
+app.use(error404Router);
 
 // Verificamos que el server este funcionando
 app.listen(process.env.PORT || PORT, () => {
