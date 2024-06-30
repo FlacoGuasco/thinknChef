@@ -30,13 +30,13 @@ app.set('views', path.join(__dirname, 'src/views')) */
     res.send('Todo funcionando OK.')
 }) */
 
-app.use('/index', indexRouter);
-/* app.use('/menu', menuRouter);
+/* app.use('/index', indexRouter);
+app.use('/menu', menuRouter);
 app.use('/contacto', contactoRouter);
 app.use('/nosotros', nosotrosRouter);
 app.use('/ayuda', ayudaRouter);
-app.use('/login', loginRouter); */
-app.use(error404Router);
+app.use('/login', loginRouter);
+app.use(error404Router); */
 
 // Verificamos que el server este funcionando
 app.listen(process.env.PORT || PORT, () => {
