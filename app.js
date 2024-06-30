@@ -5,13 +5,13 @@ dotenv.config();
 //Llamamos a la función que contiene un objeto "express"
 const express = require('express');
 
-const menuRouter = require('./src/routes/routes-menu');
+/* const menuRouter = require('./src/routes/routes-menu');
 const contactoRouter = require('./src/routes/routes-contacto');
 const nosotrosRouter = require('./src/routes/routes-nosotros');
 const ayudaRouter = require('./src/routes/routes-ayuda');
 const loginRouter = require('./src/routes/routes.login');
 const indexRouter = require('./src/routes/routes-index');
-const error404Router = require('./src/routes/routes-error404');
+const error404Router = require('./src/routes/routes-error404'); */
 
 // Instanciamos la función del objeto express
 const app = express();
