@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es" style="margin: 0; padding: 0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../style/style.css">
+
+    <!-- Agregados Favicon y Logo -->
+    <!-- <link rel="icon" href="./img/favicon_io/favicon-32x32.png"> -->
+    <link rel="icon" href="/img/faviconio-logo/logo.svg">
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    
+    <title>Menú</title>
+  </head>
+
+  <body class="container-body">
+    <!-- Inicio de NavBar -->
+    <header id="header-content"></header>
+    <!-- Fin de NavBar -->
+
+    <!-- Inicio de menu -->
+    <div class="container-menu-form">
+      <h1>Cuáles son tus preferencias para hoy?</h1>
+      <form action="" method="" id="menu-form">
+        <legend><b>Selector de Menú:</b></legend>
+        <fieldset>
+          <label for="estacion">
+            Seleccione la Estación del Año: (*)
+            <select name="estacion" id="estacion" required>
+              <option value="" disabled selected>Seleccione una estación del año...</option>
+              <option value="1">Primavera o Verano</option>
+              <option value="2">Otoño o Invierno</option>
+              <option value="3">Todos</option>
+            </select>
+          </label>
+          <br>
+          <div class="menu-form-cantidades">
+            <label for="dias">
+              Cantidad de días: (*)
+              <input type="text" name="dias" id="dias" placeholder="Ingrese número de días" required>
+            </label>
+            <label for="comensales">
+              Cantidad de Comensales: (*)
+              <input type="text" name="comensales" id="comensales" placeholder="Ingrese número de comensales" required>
+            </label>
+          </div>
+          <small>(*) Campos Obligatorios</small>
+          <small id="texto-oculto">Debe ingresar un número</small>
+        </fieldset>
+        <div class="buttons">
+          <input type="button" value="Generar" class="btn btn-primary btn-input" id="generar" disabled>
+          <input type="button" value="Borrar campos" class="btn btn-primary btn-input" id="resetear" disabled>
+        </div>
+      </form>
+      <!-- Inicio de la zona de devolucion de JS -->
+      <section class="devolucion">
+        <div id="devuelve-menu"></div>
+        <div id="devuelve-compras"></div>
+      </section>
+      <!-- Fin de la zona de devolución de JS -->
+    </div>
+
+    <!-- Inicio del pie -->
+    <footer id="footer-content"></footer>
+    <!-- Fin del pie -->
+    
+    <!-- Inicio de JS -->
+    <script src="../js/script-menu.js"></script>
+    <script src="../js/header.js"></script>
+    <script src="../js/menu-hamburguesa.js"></script>
+    <!-- Fin de JS -->
+  </body>
+  
+</html>
