@@ -25,8 +25,8 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Usamos el motor de vistas EJS y le indicamos la carpeta donde estan las vistas a usar
-/* app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'src/views')) */
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'src/views'))
 
 /* app.use('/', (req, res) => {
     res.send('Todo funcionando OK.')
