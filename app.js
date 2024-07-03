@@ -16,6 +16,17 @@ const error404Router = require('./src/routes/routes-error404'); */
 // Instanciamos la función del objeto express
 const app = express();
 
+const db = require('./src/config/db_config');
+const select = (req, res) => {
+    const sql = 'SELECT 1+1 AS result';
+    db.query(sql, (err, result) => {
+        if(err) throw err;
+        res.send(result);
+    })
+}
+
+app.use('/', select);
+
 // Middlewares
 app.use(express.json());
 
