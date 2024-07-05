@@ -117,7 +117,7 @@ CREATE TABLE `menus` (
   KEY `fk_id_tipo_comida_idx` (`id_tipo_comida`),
   CONSTRAINT `fk_id_estacion` FOREIGN KEY (`id_estacion`) REFERENCES `estaciones` (`id_estacion`),
   CONSTRAINT `fk_id_tipo_comida` FOREIGN KEY (`id_tipo_comida`) REFERENCES `tipo_comidas` (`id_tipo_comida`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -126,7 +126,7 @@ CREATE TABLE `menus` (
 
 LOCK TABLES `menus` WRITE;
 /*!40000 ALTER TABLE `menus` DISABLE KEYS */;
-INSERT INTO `menus` VALUES (1,'arroz con atún y huevo',NULL,1,1),(2,'milanesa de pollo c/ ensalada mixta',NULL,1,1),(3,'milanesa de carne c/ ensalada mixta',NULL,1,1),(4,'tarta de jamon y queso',NULL,1,1),(5,'ensalada cesar',NULL,1,1),(6,'polenta c/ tuco y queso',NULL,2,1),(7,'cabutia relleno al horno',NULL,2,1),(8,'pizza especial',NULL,3,1),(9,'tarta de espinaca y huevo',NULL,3,1),(10,'milanesa de carne c/ pure',NULL,3,1),(11,'milanesa de pollo c/ batatas al horno',NULL,2,1),(12,'pastel de papa',NULL,2,1),(13,'yogurt c/ cereales',NULL,3,3),(14,'hotcakes c/ frutas',NULL,3,3),(15,'frutas a elección',NULL,3,3),(16,'cafe c/ leche',NULL,3,4),(17,'mate cocido',NULL,3,4),(18,'te',NULL,3,4),(19,'flan c/ dulce de leche',NULL,3,2),(20,'frutillas c/ crema',NULL,3,2);
+INSERT INTO `menus` VALUES (1,'arroz con atún y huevo',NULL,1,1),(2,'milanesa de pollo c/ ensalada mixta',NULL,1,1),(3,'milanesa de carne c/ ensalada mixta',NULL,1,1),(4,'tarta de jamon y queso',NULL,1,1),(5,'ensalada cesar',NULL,1,1),(6,'polenta c/ tuco y queso',NULL,2,1),(7,'cabutia relleno al horno',NULL,2,1),(8,'pizza especial',NULL,3,1),(9,'tarta de espinaca y huevo',NULL,3,1),(10,'milanesa de carne c/ pure',NULL,3,1),(11,'milanesa de pollo c/ batatas al horno',NULL,2,1),(12,'pastel de papa',NULL,2,1),(13,'yogurt c/ cereales',NULL,3,3),(14,'hotcakes c/ frutas',NULL,3,3),(15,'frutas a elección',NULL,3,3),(16,'cafe c/ leche',NULL,3,4),(17,'mate cocido',NULL,3,4),(18,'te',NULL,3,4),(19,'flan c/ dulce de leche',NULL,3,2),(20,'frutillas c/ crema',NULL,3,2),(22,'soy cambiado de nuevo 22',NULL,1,2),(25,'soy el menu 25',NULL,2,1);
 /*!40000 ALTER TABLE `menus` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -275,4 +275,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-06-20 14:15:28
+-- Dump completed on 2024-07-05 20:29:55

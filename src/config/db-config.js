@@ -9,11 +9,11 @@ const connectionDB = mysql.createConnection({
     database: process.env.DATABASE,
     port: process.env.DB_PORT */
 
-    host: process.env.HOST || 3000,
-    user: process.env.USERNAME || 'cesar',
-    password: process.env.PASSWORD || 'root',
-    database: process.env.DATABASE || 'thinknChef',
-    port: process.env.DB_PORT || 3306
+    host: 'mysql-popotropico.alwaysdata.net',
+    user: '366902',
+    password: 'cesar25251',
+    database: 'popotropico_thinknchef',
+    port: 3306
 });
 
 connectionDB.connect((err) => {
