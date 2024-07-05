@@ -1,6 +1,6 @@
 const path = require('path');
-const dotenv = require('dotenv');
-dotenv.config();
+require('dotenv').config();
+console.log(process.env);
 
 //Llamamos a la función que contiene un objeto "express"
 const express = require('express');
