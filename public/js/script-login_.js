@@ -1,7 +1,7 @@
 /* Selecciono las etiquetas HTML */
 let usuario = document.getElementById('usuario');
 let password = document.getElementById('password');
-let login = document.getElementById('login');
+let btnLogin = document.getElementById('login');
 let loginForm = document.getElementById('login-form');
 let btnResetear = document.getElementById('resetear');
 let textoOculto = document.getElementById('texto-oculto');
@@ -33,9 +33,9 @@ password.addEventListener('keyup', (event) => {
 
 function toggleButtons(){
     if(usuario.value.trim() !== "" && password.value.trim() !== ""){
-        login.disabled = false;
+        btnLogin.disabled = false;
     } else {
-        login.disabled = true;
+        btnLogin.disabled = true;
         btnResetear.disabled = true;
     }
 };
@@ -44,7 +44,7 @@ function toggleButtons(){
 btnResetear.addEventListener('click', () => {
     loginForm.reset();
     borrarCampos();
-    login.disabled = true;
+    btnLogin.disabled = true;
     btnResetear.disabled = true;
 });
 

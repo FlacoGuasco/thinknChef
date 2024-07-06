@@ -8,7 +8,7 @@ const getAllMenus = async (req, res) => {
     const sql ='SELECT nom_menu, nom_estacion, descripcion FROM menus m, estaciones e, tipo_comidas tc WHERE m.id_estacion = e.id_estacion AND m.id_tipo_comida = tc.id_tipo_comida';
     db.query(sql, (err, menus) => {
         if(err) throw err;
-        res.render('views-menu', {menus});
+        res.send({menus});
     });
 };
 

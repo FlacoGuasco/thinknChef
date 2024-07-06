@@ -1,5 +1,18 @@
+const db = require('../config/db-config');
+
 //El módulo Path nos permite resolver rutas absolutas
 const path = require('path');
-const login = (req, res) => res.sendFile(path.resolve(__dirname, '../../public/pages/login.html'));
+const login = (req, res) => res.render('login');
 
-module.exports = { login };
+// Método para loguearnos
+const creaLogin = async (req, res) => {
+    try {
+        const usuario = req.body.usuario;
+        const password = req.body.password;
+        console.log(usuario);
+    } catch (error) {
+        
+    }
+}
+
+module.exports = { login, creaLogin };

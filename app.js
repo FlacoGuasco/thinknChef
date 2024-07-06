@@ -1,6 +1,6 @@
 const path = require('path');
 require('dotenv').config();
-console.log(process.env);
+const cookieParser = require('cookie-parser');
 
 //Llamamos a la función que contiene un objeto "express"
 const express = require('express');
@@ -10,6 +10,7 @@ const contactoRouter = require('./src/routes/routes-contacto');
 const nosotrosRouter = require('./src/routes/routes-nosotros');
 const ayudaRouter = require('./src/routes/routes-ayuda');
 const loginRouter = require('./src/routes/routes.login');
+const registerRouter = require('./src/routes/routes-register');
 const menuRouter = require('./src/routes/routes-menu');
 const error404Router = require('./src/routes/routes-error404');
 
@@ -17,6 +18,7 @@ const error404Router = require('./src/routes/routes-error404');
 const app = express();
 
 // Middlewares
+app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 
 // Este método sirve para buscar primero en la carpeta 'public', sino, sigue buscando
@@ -26,15 +28,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'src/views'))
 
-/* app.use('/', (req, res) => {
-    res.send('Todo funcionando OK.')
-}) */
+// Seteamos para trabajar con las cookies
+app.use(cookieParser());
 
+// Llamado a las rutas
 app.use('/index', indexRouter);
 app.use('/contacto', contactoRouter);
 app.use('/nosotros', nosotrosRouter);
 app.use('/ayuda', ayudaRouter);
 app.use('/login', loginRouter);
+app.use('/register', registerRouter);
 app.use('/menu', menuRouter);
 app.use(error404Router);
 
