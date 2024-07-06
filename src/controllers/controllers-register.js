@@ -19,10 +19,13 @@ const creaRegister = async (req, res) => {
         /* console.log(usuario + " - " + email + " - " + password)
         console.log(passHash); */
 
-        db.query('INSERT INTO usuarios SET ?', {usuario:usuario, email:email, password:passHash}, (err, res) => {
-            if(err) {console.log(err)};
-            res.send('correcto');    
+        const sql = 'INSERT INTO usuarios (usuario, email, password) VALUES (?, ?, ?)';
+        db.query(sql, [usuario, email, passHash], (error, result) => {
+            if(error) throw error;
+            res.json({ message: 'Usuario Creado!', id_usuario: result.insertId });  
         })
+
+        
     } catch (err) {
         console.log(err);
     }
