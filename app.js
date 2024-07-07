@@ -12,6 +12,7 @@ const ayudaRouter = require('./src/routes/routes-ayuda');
 const loginRouter = require('./src/routes/routes-login');
 const registerRouter = require('./src/routes/routes-register');
 const menuRouter = require('./src/routes/routes-menu');
+const adminRouter = require('./src/routes/routes-admin');
 const error404Router = require('./src/routes/routes-error404');
 
 // Instanciamos la función del objeto express
@@ -37,8 +38,10 @@ app.use('/contacto', contactoRouter);
 app.use('/nosotros', nosotrosRouter);
 app.use('/ayuda', ayudaRouter);
 app.use('/login', loginRouter);
+app.use('/logout', loginRouter);
 app.use('/register', registerRouter);
 app.use('/menu', menuRouter);
+app.use('/admin', adminRouter);
 app.use(error404Router);
 
 // Verificamos que el server este funcionando

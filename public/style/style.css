@@ -192,7 +192,8 @@ ul li:last-child a {
 .container-contact-form,
 .container-menu-form,
 .container-login-form,
-.container-register-form {
+.container-register-form,
+.container-admin-form {
   grid-area: main;
   display: flex;
   flex-direction: column;
