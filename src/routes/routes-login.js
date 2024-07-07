@@ -8,6 +8,6 @@ router.get('/', loginController.login);
 
 // Ruta para los controladores
 router.post('/', loginController.creaLogin);
-router.get('/', loginController.logout);
+router.get('/logout', loginController.logout);
 
 module.exports = router;

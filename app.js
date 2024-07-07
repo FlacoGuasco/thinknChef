@@ -22,12 +22,17 @@ const app = express();
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 
+// Módulo para crear layouts
+const layouts = require('express-ejs-layouts');
+
 // Este método sirve para buscar primero en la carpeta 'public', sino, sigue buscando
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Usamos el motor de vistas EJS y le indicamos la carpeta donde estan las vistas a usar
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'src/views'))
+
+
 
 // Seteamos para trabajar con las cookies
 app.use(cookieParser());
@@ -38,10 +43,11 @@ app.use('/contacto', contactoRouter);
 app.use('/nosotros', nosotrosRouter);
 app.use('/ayuda', ayudaRouter);
 app.use('/login', loginRouter);
-app.use('/logout', loginRouter);
+app.use('/', loginRouter);
 app.use('/register', registerRouter);
 app.use('/menu', menuRouter);
 app.use('/admin', adminRouter);
+app.use('/', adminRouter);
 app.use(error404Router);
 
 // Verificamos que el server este funcionando

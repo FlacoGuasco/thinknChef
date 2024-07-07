@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
     
-    <title>Administrador</title>
+    <title>Editar Menu</title>
   </head>
   <body class="container-body">
     <!-- Inicio de NavBar -->
@@ -24,40 +24,32 @@
 
     <!-- Inicio del login -->
   
-    <div class="container-admin">
-     <div>
-      <a href="logout" type="button">Logout</a>
-      <a href="/agregar-menu"><i class="bi bi-plus-circle"></i></a>
-     </div>
-    
-     <div class="admin-table">
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>MENU</th>
-            <th>TIPO</th>
-            <th>ACCION</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% results.forEach((menu) => { %>
-
-            <tr>
-              <td><%= menu.id_menu %></td>
-              <td><%= menu.nom_menu %></td>
-              <td><%= menu.descripcion %></td>
-              <td>
-                <a href="/editar/<%= menu.id_menu %>" type="button">Editar</a>
-                <a href="/borrar/<%= menu.id_menu %>" type="button">Borrar</a>
-              </td>
-            </tr>
-          <% }) %>
-        </tbody>
-      </table>
-     </div>
-
-    </div>  
+    <% if (menu) { %>
+    <div class="container-agregar-form">
+        <form action="/actualizar" method="POST">
+          <input id="id_menu" name="id_menu" value="<%= menu.id_menu %>" hidden>
+          <div>
+            <label for="nom_menu">Nombre Menu</label>
+            <input type="text" id="nom_menu" name="nom_menu" value="<%= menu.nom_menu %>">
+          </div>
+          <br>
+          <div>
+            <label for="estacion">Estación</label>
+            <input type="text" id="estacion" name="estacion" value="<%= menu.id_estacion %>">
+          </div>
+          <br>
+          <div>
+            <label for="tipo_comida">Tipo</label>
+            <input type="text" id="tipo_comida" name="tipo_comida" value="<%= menu.id_tipo_comida %>">
+          </div>
+          <br>
+          <div class="buttons">
+              <button type="submit">Guardar</button>
+              <a href="/" type="button">Cancelar</a>
+          </div>
+        </form>
+      </div>  
+      <% } %>  
 
     <!-- Fin del login -->
 

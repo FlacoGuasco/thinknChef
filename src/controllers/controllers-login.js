@@ -14,8 +14,8 @@ const creaLogin = async (req, res) => {
         const password = req.body.password;
         console.log(usuario);
 
-        if(!usuario || !password) {
-            res.render('login', {
+        /*if(!usuario || !password) {
+             res.render('login', {
                 alert: true,
                 alertTitle: 'Advertencia',
                 alertMessage: 'Ingrese usuario y contraseña',
@@ -42,12 +42,13 @@ const creaLogin = async (req, res) => {
                     // Si ingresa acá, el inicio de sesion esta validado
                     const id = results[0].id;
                     const tokenJWT = jwt.sign({id:id}, process.env.JWT_SECRETO, {
-                        expiresIn: process.env.JWT_TIEMPO_EXPIRA
+                        expiresIn: '10d'
                     })
                     console.log('TOKEN: ' + tokenJWT + ' para el usuario: ' + usuario);
+                    
                     // Configuramos las cookies
                     const cookiesOptions = {
-                        expires: new Date(Date.now()+process.env.JWT_COOKIE_EXPIRA * 24 * 60 * 60 * 1000),
+                        expires: new Date(Date.now() + process.env.JWT_COOKIE_EXPIRA * 24 * 60 * 60 * 1000),
                         httpOnly: true
                    }
                    res.cookie('jwt', tokenJWT, cookiesOptions)
@@ -58,11 +59,11 @@ const creaLogin = async (req, res) => {
                         alertIcon:'success',
                         showConfirmButton: false,
                         timer: 800,
-                        ruta: ''
+                        ruta: 'admin'
                    })
                 }
             });
-        }
+        } */
     } catch (error) {
         console.log(error);
     }
@@ -90,7 +91,7 @@ const usuarioAuth = async (req, res, next) => {
     }
 }
 
-// NOs deslogueamos
+// Nos deslogueamos
 const logout = (req, res)=>{
     res.clearCookie('jwt')   
     return res.redirect('/')
