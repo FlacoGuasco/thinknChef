@@ -41,7 +41,7 @@ const creaLogin = async (req, res) => {
                 }else {
                     // Si ingresa acá, el inicio de sesion esta validado
                     const id = results[0].id;
-                    const tokenJWT = jwt.sign({id:id}, process.env.JWT_SECRETO, {
+                    const tokenJWT = jwt.sign({id:id}, 'mi_clave_secreta_JWT', {
                         expiresIn: '10d'
                     })
                     console.log('TOKEN: ' + tokenJWT + ' para el usuario: ' + usuario);
@@ -74,7 +74,7 @@ const creaLogin = async (req, res) => {
 const usuarioAuth = async (req, res, next) => {
     if(req.cookies.jwt){
         try {
-            const decodificada = await promisify(jwt.verify)(req.cookies.jwt, process.env.JWT_SECRETO);
+            const decodificada = await promisify(jwt.verify)(req.cookies.jwt, 'mi_clave_secreta_JWT');
             
             const sql = 'SELECT * FROM usuarios WHERE usuario = ?';
             db.query(sql, [decodificada.id], (err, results) => {
