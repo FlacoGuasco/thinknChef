@@ -14,7 +14,7 @@ const creaLogin = async (req, res) => {
         const password = req.body.password;
         console.log(usuario);
 
-        /*if(!usuario || !password) {
+        if(!usuario || !password) {
              res.render('login', {
                 alert: true,
                 alertTitle: 'Advertencia',
@@ -63,7 +63,7 @@ const creaLogin = async (req, res) => {
                    })
                 }
             });
-        } */
+        }
     } catch (error) {
         console.log(error);
     }
