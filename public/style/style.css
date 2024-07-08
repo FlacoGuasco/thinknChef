@@ -191,7 +191,10 @@ ul li:last-child a {
 /* Estilos generales de los formularios */
 .container-contact-form,
 .container-menu-form,
-.container-login-form {
+.container-login-form,
+.container-register-form,
+.container-admin,
+.container-agregar-form {
   grid-area: main;
   display: flex;
   flex-direction: column;
@@ -203,7 +206,8 @@ ul li:last-child a {
 
 #contact-form,
 #menu-form,
-#login-form {
+#login-form,
+#register-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -271,7 +275,9 @@ textarea {
 #contact-form label,
 #contact-form fieldset,
 #login-form label,
-#login-form fieldset {
+#login-form fieldset,
+#register-form label,
+#register-form fieldset  {
   width: 100%;
   border: none;
 }
