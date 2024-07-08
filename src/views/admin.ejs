@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
     
-    <title>Login</title>
+    <title>Administrador</title>
   </head>
   <body class="container-body">
     <!-- Inicio de NavBar -->
@@ -24,23 +24,40 @@
 
     <!-- Inicio del login -->
   
-    <div class="container-login-form">
-      <form action="#" method="POST" id="login-form">
-        <fieldset>
-          <legend><b>Espacio para administradores</b></legend>
-          <br>
-            <input type="text" name= "usuario" id="usuario" placeholder="Ingrese su usuario..." required>
-          <br>
-            <input type="password" name="password" id="password" placeholder="Ingrese su password..." required>
-          <small id="texto-oculto">El correo ingresado no es válido</small>
-        </fieldset>
-        <br>
-        <div class="buttons">
-          <input type="button" value="Login" class="btn btn-primary btn-input" id="login" disabled>
-          <input type="reset" value="Borrar campos" class="btn btn-primary btn-input" id="resetear" disabled>
-        </div>
-      </form>
-  </div>  
+    <div class="container-admin">
+     <div>
+      <a href="logout" type="button">Logout</a>
+      <a href="/agregar-menu"><i class="bi bi-plus-circle"></i></a>
+     </div>
+    
+     <div class="admin-table">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>MENU</th>
+            <th>TIPO</th>
+            <th>ACCION</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% results.forEach((menu) => { %>
+
+            <tr>
+              <td><%= menu.id_menu %></td>
+              <td><%= menu.nom_menu %></td>
+              <td><%= menu.descripcion %></td>
+              <td>
+                <a href="/editar/<%= menu.id_menu %>" type="button">Editar</a>
+                <a href="/borrar/<%= menu.id_menu %>" type="button">Borrar</a>
+              </td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+     </div>
+
+    </div>  
 
     <!-- Fin del login -->
 
@@ -49,7 +66,6 @@
     <!-- Fin del pie -->
     
     <!-- Inicio de JS -->
-    <script src="../js/script-login.js"></script>
     <script src="../js/header.js"></script>
     <script src="../js/menu-hamburguesa.js"></script>
     <!-- Fin de JS -->
