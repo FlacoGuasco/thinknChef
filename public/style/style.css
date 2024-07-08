@@ -477,10 +477,40 @@ textarea {
   text-shadow: 2px 2px 3px rgba(97, 60, 4, 0.5);
 }
 
-/* .devolucion{
-    display: none;
-    text-align: center; 
-} */
+/* Estilos de la página de administrador */
+.admin-table {
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.btn-admin {
+  display: flex;
+  gap: 2em;
+}
+
+.btn-admin #agregar {
+  color: blue;
+  font-size: 4em;
+}
+
+.btn-admin #agregar:hover {
+  font-weight: 100;
+}
+
+.btn-admin #logout {
+  background-color: var(--color-marron);
+  padding: 0 5px;
+  border-radius: 8px;
+  color: var(--color-blanco);
+  font-size: 2em;
+}
+
+.btn-admin #logout :hover {
+  background-color: var(--color-marron-hover);
+  border-radius: 8px;
+  color: var(--color-blanco);
+}
+
 
 /* Estilos ayuda */
 .faq-container {

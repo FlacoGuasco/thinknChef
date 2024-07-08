@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!-- Agregados Favicon y Logo -->
     <!-- <link rel="icon" href="./img/favicon_io/favicon-32x32.png"> -->
@@ -25,19 +26,19 @@
     <!-- Inicio del login -->
   
     <div class="container-admin">
-     <div>
-      <a href="logout" type="button">Logout</a>
-      <a href="/agregar-menu"><i class="bi bi-plus-circle"></i></a>
+     <div class="btn-admin">
+      <a href="logout" type="button" id="logout">Logout</a>
+      <a href="/agregar-menu" id="agregar"><i class="bi bi-plus-circle"></i></a>
      </div>
     
      <div class="admin-table">
-      <table>
-        <thead>
+      <table class="table">
+        <thead class="thead-dark">
           <tr>
-            <th>ID</th>
-            <th>MENU</th>
-            <th>TIPO</th>
-            <th>ACCION</th>
+            <th scope="col">ID</th>
+            <th scope="col">MENU</th>
+            <th scope="col">TIPO</th>
+            <th scope="col">ACCION</th>
           </tr>
         </thead>
         <tbody>
