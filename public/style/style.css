@@ -93,6 +93,7 @@ ul li:last-child a {
   background-color: var(--color-marron-hover);
   border-radius: 8px;
   color: var(--color-blanco);
+  text-decoration: none;
 }
 
 /* Estilos del Footer */
@@ -194,7 +195,8 @@ ul li:last-child a {
 .container-login-form,
 .container-register-form,
 .container-admin,
-.container-agregar-form {
+.container-agregar-form,
+.container-editar-form {
   grid-area: main;
   display: flex;
   flex-direction: column;
@@ -207,7 +209,9 @@ ul li:last-child a {
 #contact-form,
 #menu-form,
 #login-form,
-#register-form {
+#register-form,
+#agregar-form, 
+#editar-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -245,7 +249,9 @@ textarea {
   width: 100%;
 }
 
-.buttons input {
+.buttons input,
+.buttons button,
+.buttons a {
   background-color: var(--color-marron);
   border-color: var(--color-marron);
   padding: 10px;
@@ -253,9 +259,12 @@ textarea {
   height: 100%;
   color: var(--color-blanco);
   border-radius: 8px;
+  text-decoration: none;
 }
 
-.buttons input:hover {
+.buttons input:hover,
+.buttons button:hover,
+.buttons a:hover {
   background-color: var(--color-marron-hover);
   border-color: var(--color-marron-hover);
   cursor: pointer;
@@ -277,7 +286,11 @@ textarea {
 #login-form label,
 #login-form fieldset,
 #register-form label,
-#register-form fieldset  {
+#register-form fieldset,
+#agregar-form label,
+#agregar-form fieldset,
+#editar-form label,
+#editar-form fieldset    {
   width: 100%;
   border: none;
 }
@@ -477,10 +490,41 @@ textarea {
   text-shadow: 2px 2px 3px rgba(97, 60, 4, 0.5);
 }
 
-/* .devolucion{
-    display: none;
-    text-align: center; 
-} */
+/* Estilos de la página de administrador */
+.admin-table {
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.btn-admin {
+  display: flex;
+  gap: 2em;
+}
+
+.btn-admin a {
+  background-color: var(--color-marron);
+  padding: 0 5px;
+  border-radius: 8px;
+  color: var(--color-blanco);
+  font-size: 2em;
+}
+
+.btn-admin a:hover {
+  background-color: var(--color-marron-hover);
+  border-radius: 8px;
+  color: var(--color-blanco);
+  text-decoration: none;
+}
+
+/* Estilos agregar, editar, registrar, login */
+.agregar-btns,
+.editar-btns,
+.register-btns,
+.login-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /* Estilos ayuda */
 .faq-container {
