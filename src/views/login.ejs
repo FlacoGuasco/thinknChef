@@ -25,20 +25,26 @@
     <!-- Inicio del login -->
   
     <div class="container-login-form">
-      <form action="/login" method="POST">
-        <div>
-          <label for="usuario">Usuario</label>
-          <input type="text" name="usuario" id="usuario">
-        </div>  
-        <div>
-          <label for="password">Password</label>
-          <input type="password" name="password" id="password">
-        </div>
-        <button type="submit">Login</button>  
+      <form action="/login" method="POST" id="login-form">
+        <fieldset>
+          <div>
+            <label for="usuario">Usuario</label>
+            <input type="text" name="usuario" id="usuario">
+          </div>  
+          <div>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password">
+          </div>
+          <div class="buttons login-btns">
+            <button type="submit">Login</button>  
+          </div>
+        </fieldset>
       </form> 
       
       <br>
-      <a href="register" type="button">Registrarse</a> 
+      <div class="buttons register-btns">
+        <a href="register" type="button">Registrarse</a> 
+      </div>
     </div>  
 
     <!-- Fin del login -->

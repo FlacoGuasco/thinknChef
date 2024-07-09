@@ -28,15 +28,16 @@
     <div class="container-admin">
      <div class="btn-admin">
       <a href="logout" type="button" id="logout">Logout</a>
-      <a href="/agregar-menu" id="agregar"><i class="bi bi-plus-circle"></i></a>
+      <a href="/agregar-menu" id="agregar">Agregar Menu</a>
      </div>
     
      <div class="admin-table">
-      <table class="table">
+      <table class="table table-sm">
         <thead class="thead-dark">
           <tr>
             <th scope="col">ID</th>
             <th scope="col">MENU</th>
+            <th scope="col">ESTACION</th>
             <th scope="col">TIPO</th>
             <th scope="col">ACCION</th>
           </tr>
@@ -47,6 +48,7 @@
             <tr>
               <td><%= menu.id_menu %></td>
               <td><%= menu.nom_menu %></td>
+              <td><%= menu.nom_estacion %></td>
               <td><%= menu.descripcion %></td>
               <td>
                 <a href="/editar/<%= menu.id_menu %>" type="button">Editar</a>
