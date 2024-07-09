@@ -30,18 +30,41 @@
           <fieldset>
             <div>
               <label for="nom_menu">Nombre Menu</label>
-              <input type="text" id="nom_menu" name="nom_menu">
+              <input type="text" id="nom_menu" name="nom_menu" placeholder="Ingrese el nombre del menu...">
             </div>
             <br>
-            <div>
+            <!-- <div>
               <label for="estacion">Estación</label>
               <input type="text" id="estacion" name="estacion">
-            </div>
-            <br>
+            </div> -->
+
             <div>
+              <label for="estacion">Estación</label>
+              <select name="estacion" id="estacion">
+                <option value="" disabled selected>Seleccione una estación del año...</option>
+                <option value=1>verano</option>
+                <option value=2>invierno</option>
+                <option value=3>todas</option>
+              </select>
+            </div>
+
+            <br>
+            <!-- <div>
               <label for="tipo_comida">Tipo</label>
               <input type="text" id="tipo_comida" name="tipo_comida">
+            </div> -->
+
+            <div>
+              <label for="tipo_comida">Tipo</label>
+              <select name="tipo_comida" id="tipo_comida">
+                <option value="" disabled selected>Seleccione un tipo de comida...</option>
+                <option value=1>comida</option>
+                <option value=2>postre</option>
+                <option value=3>snack</option>
+                <option value=4>infusión</option>
+              </select>
             </div>
+
             <br>
             <div class="buttons agregar-btns">
               <button type="submit" class="btn btn-primary btn-input">Guardar</button>
