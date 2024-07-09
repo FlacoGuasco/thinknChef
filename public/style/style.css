@@ -16,6 +16,7 @@
   --color-marron-hover: #6d3810;
   --color-social-hover: grey;
   --color-rojo-oculto: red;
+  --color-marron-claro: #F39C12;
 }
 
 html {
@@ -491,6 +492,24 @@ textarea {
 }
 
 /* Estilos de la página de administrador */
+#admin-form {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0 15px;
+  border-radius: 8px;
+}
+
+#admin-form a {
+  font-size: 1.5em;
+  padding: 5px 15px;
+}
+
+#admin-form a:nth-last-child(1) {
+ background-color: var(--color-marron-claro);
+ color: var(--color-negro);
+}
+
 .admin-table {
   font-size: 1.2em;
   text-align: center;
@@ -519,11 +538,15 @@ textarea {
 /* Estilos agregar, editar, registrar, login */
 .agregar-btns,
 .editar-btns,
-.register-btns,
 .login-btns {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.register-login {
+  background-color: var(--color-marron-claro) !important;
+  color: var(--color-marron) !important;
 }
 
 /* Estilos ayuda */
