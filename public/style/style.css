@@ -515,6 +515,14 @@ textarea {
   text-align: center;
 }
 
+.admin-table a:nth-last-child(1) {
+  color: var(--color-rojo-oculto);
+}
+
+.admin-table a:nth-last-child(1):hover {
+  color: #0056b3;
+}
+
 .btn-admin {
   display: flex;
   gap: 2em;

@@ -2,6 +2,9 @@ const path = require('path');
 require('dotenv').config();
 const cookieParser = require('cookie-parser');
 
+// Módulo para crear layouts
+const layouts = require('express-ejs-layouts');
+
 //Llamamos a la función que contiene un objeto "express"
 const express = require('express');
 
@@ -22,16 +25,12 @@ const app = express();
 app.use(express.urlencoded({extended:true})); //Define como vamos a capturar los datos de los formularios
 app.use(express.json());
 
-// Módulo para crear layouts
-const layouts = require('express-ejs-layouts');
-
 // Este método sirve para buscar primero en la carpeta 'public', sino, sigue buscando
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Usamos el motor de vistas EJS y le indicamos la carpeta donde estan las vistas a usar
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'src/views'))
-
 
 
 // Seteamos para trabajar con las cookies
