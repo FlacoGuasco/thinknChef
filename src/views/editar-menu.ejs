@@ -35,19 +35,40 @@
                 <input type="text" id="nom_menu" name="nom_menu" value="<%= menu.nom_menu %>">
               </div>
               <br>
-              <div>
+              <!-- <div>
                 <label for="estacion">Estación</label>
               <input type="text" id="estacion" name="estacion" value="<%= menu.id_estacion %>">
-              </div>
-              <br>
+              </div> -->
+
               <div>
+                <label for="estacion">Estación</label>
+                <select name="estacion" id="estacion">
+                  <option <%= menu.id_estacion==1 ? "selected" : '' %> value=1>verano</option>
+                  <option <%= menu.id_estacion==2 ? "selected" : '' %> value=2>invierno</option>
+                  <option <%= menu.id_estacion==3 ? "selected" : '' %> value=3>todas</option>
+                </select>
+              </div>
+
+              <br>
+              <!-- <div>
                 <label for="tipo_comida">Tipo</label>
                 <input type="text" id="tipo_comida" name="tipo_comida" value="<%= menu.id_tipo_comida %>">
+              </div> -->
+
+              <div>
+                <label for="tipo_comida">Tipo</label>
+                <select name="tipo_comida" id="tipo_comida">
+                  <option <%= menu.id_tipo_comida==1 ? "selected" : '' %> value=1>comida</option>
+                  <option <%= menu.id_tipo_comida==2 ? "selected" : '' %> value=2>postre</option>
+                  <option <%= menu.id_tipo_comida==3 ? "selected" : '' %> value=3>snack</option>
+                  <option <%= menu.id_tipo_comida==4 ? "selected" : '' %> value=4>infusión</option>
+                </select>
               </div>
+
               <br>
-              <div class="buttons editar-btns">
-                <button type="submit" class="btn btn-primary btn-input">Guardar</button>
-                <a href="/admin" type="button">Cancelar</a>
+              <div class="buttons">
+                <input type="submit" value="Guardar" class="btn btn-primary btn-input">
+                <a href="/admin" type="button" class="register-login">Cancelar</a> 
               </div>
             </fieldset>
           </form>

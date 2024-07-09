@@ -38,7 +38,7 @@ document.getElementById('header-content').innerHTML = `
                     </a>
                 </li>
                 <li>
-                    <a href="/login">
+                    <a href="/login" id="btn-login">
                         <i class="bi bi-gear"></i>
                         <span>Login</span>
                     </a>

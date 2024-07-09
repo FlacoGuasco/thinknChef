@@ -44,7 +44,7 @@ const creaRegister = async (req, res) => {
                                 alertIcon:'success',
                                 showConfirmButton: false,
                                 timer: 1500,
-                                ruta: 'admin'
+                                ruta: 'login'
                             }) 
                         })
                     }else {
@@ -57,10 +57,7 @@ const creaRegister = async (req, res) => {
                             timer: false,
                             ruta: 'register'
                         });
-
-                        
                     }
-                    
                 });
             } catch (error) {
                 console.log(error);

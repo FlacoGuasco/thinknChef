@@ -22,55 +22,57 @@
     <!-- Inicio de NavBar -->
     <header id="header-content"></header>
     <!-- Fin de NavBar -->
-
-    <!-- Inicio del login -->
-  
-    <div class="container-admin">
-     <div class="btn-admin">
-      <a href="logout" type="button" id="logout">Logout</a>
-      <a href="/agregar-menu" id="agregar">Agregar Menu</a>
-     </div>
     
-     <div class="admin-table">
-      <table class="table table-sm">
-        <thead class="thead-dark">
-          <tr>
-            <th scope="col">ID</th>
-            <th scope="col">MENU</th>
-            <th scope="col">ESTACION</th>
-            <th scope="col">TIPO</th>
-            <th scope="col">ACCION</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% results.forEach((menu) => { %>
-
-            <tr>
-              <td><%= menu.id_menu %></td>
-              <td><%= menu.nom_menu %></td>
-              <td><%= menu.nom_estacion %></td>
-              <td><%= menu.descripcion %></td>
-              <td>
-                <a href="/editar/<%= menu.id_menu %>" type="button">Editar</a>
-                <a href="/borrar/<%= menu.id_menu %>" type="button">Borrar</a>
-              </td>
-            </tr>
-          <% }) %>
-        </tbody>
-      </table>
-     </div>
-
+    <!-- Inicio del login -->
+    
+    <div class="container-admin">
+        <div class="buttons" id="admin-form">
+          <a href="/agregar-menu" type="button" id="agreagr">Agregar Menu</a> 
+          <a href="logout" type="button" id="logout">Logout</a> 
+        </div>
+        
+        <div class="admin-table">
+          <table class="table table-sm">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">MENU</th>
+                <th scope="col">ESTACION</th>
+                <th scope="col">TIPO</th>
+                <th scope="col">ACCION</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% results.forEach((menu) => { %>
+                
+                <tr>
+                  <td><%= menu.id_menu %></td>
+                  <td><%= menu.nom_menu %></td>
+                  <td><%= menu.nom_estacion %></td>
+                  <td><%= menu.descripcion %></td>
+                  <td>
+                    <a href="/editar/<%= menu.id_menu %>" type="button">Editar</a>
+                    <a href="/borrar/<%= menu.id_menu %>" type="button">Borrar</a>
+                  </td>
+                </tr>
+                <% }) %>
+              </tbody>
+            </table>
+        </div>
+          
     </div>  
-
-    <!-- Fin del login -->
-
-    <!-- Inicio del pie -->
+        
+        <!-- Fin del login -->
+        
+        <!-- Inicio del pie -->
     <footer id="footer-content"></footer>
     <!-- Fin del pie -->
     
     <!-- Inicio de JS -->
     <script src="../js/header.js"></script>
     <script src="../js/menu-hamburguesa.js"></script>
+
+    
     <!-- Fin de JS -->
   </body>
 </html>

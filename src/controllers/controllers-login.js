@@ -3,6 +3,7 @@ const bcryptjs = require('bcryptjs');
 const db = require('../config/db-config');
 const { promisify } = require('util');
 
+
 //El módulo Path nos permite resolver rutas absolutas
 const path = require('path');
 const login = (req, res) => res.render('login', { alert:false });
@@ -59,7 +60,7 @@ const creaLogin = async (req, res) => {
                         alertMessage: "¡LOGIN CORRECTO!",
                         alertIcon:'success',
                         showConfirmButton: false,
-                        timer: 800,
+                        timer: 1500,
                         ruta: 'admin'
                    })
                 }
