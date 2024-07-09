@@ -19,7 +19,7 @@ const error404Router = require('./src/routes/routes-error404');
 const app = express();
 
 // Middlewares
-app.use(express.urlencoded({extended:true}));
+app.use(express.urlencoded({extended:true})); //Define como vamos a capturar los datos de los formularios
 app.use(express.json());
 
 // Módulo para crear layouts

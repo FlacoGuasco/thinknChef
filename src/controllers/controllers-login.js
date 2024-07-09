@@ -59,7 +59,7 @@ const creaLogin = async (req, res) => {
                         alertMessage: "¡LOGIN CORRECTO!",
                         alertIcon:'success',
                         showConfirmButton: false,
-                        timer: 800,
+                        timer: 1500,
                         ruta: 'admin'
                    })
                 }

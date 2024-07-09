@@ -2,6 +2,7 @@ const db = require('../config/db-config');
 const agregarMenu = (req, res) => res.render('agregar-menu', { alert:false });
 const editarMenu = (req, res) => res.render('editar-menu', { alert:false });
 
+// Función para MOSTRAR los menu existentes (los muestra en págin principal /admin)
 const mostrar = (req, res) => {
    const sql ='SELECT id_menu, nom_menu, nom_estacion, descripcion FROM menus m, estaciones e, tipo_comidas tc WHERE m.id_estacion = e.id_estacion AND m.id_tipo_comida = tc.id_tipo_comida ORDER BY id_menu';
         db.query(sql, (err, results) => {
@@ -10,6 +11,7 @@ const mostrar = (req, res) => {
         });
 };
 
+// Función para AGREGAR un menu a la DB
 const guardar = (req, res) => {
     try {
         const nom_menu = req.body.nom_menu;
@@ -26,7 +28,8 @@ const guardar = (req, res) => {
         console.log(error);
     }
 }; 
- 
+
+// Función para BUSCAR un menu según su ID en la DB
 const buscar = (req, res) => {
     try {
         const id = req.params.id;
@@ -42,7 +45,7 @@ const buscar = (req, res) => {
     }
 };   
 
-
+// Función para EDITAR un menu de la DB
 const actualizar = (req, res) => {
     try {
         const id_menu = req.body.id_menu
@@ -62,6 +65,7 @@ const actualizar = (req, res) => {
     }
 }
 
+// Función para BORRAR un menu de la DB
 const borrar = (req, res) => {
     try {
         const id = req.params.id;
