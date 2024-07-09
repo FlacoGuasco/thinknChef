@@ -28,6 +28,7 @@ const creaLogin = async (req, res) => {
             
             const sql = 'SELECT * FROM usuarios WHERE usuario = ?';
             db.query(sql, [usuario], async (err, results) => {
+                console.log(results.length);
                 if(results.length == 0 || !(await bcryptjs.compare(password, results[0].password))){
                     res.render('login', {
                         alert: true,
