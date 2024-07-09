@@ -25,28 +25,31 @@
     <!-- Inicio del login -->
   
     <div class="container-agregar-form">
-        <form action="/guardar" method="POST">
-          <div>
-            <label for="nom_menu">Nombre Menu</label>
-            <input type="text" id="nom_menu" name="nom_menu">
-          </div>
-          <br>
-          <div>
-            <label for="estacion">Estación</label>
-            <input type="text" id="estacion" name="estacion">
-          </div>
-          <br>
-          <div>
-            <label for="tipo_comida">Tipo</label>
-            <input type="text" id="tipo_comida" name="tipo_comida">
-          </div>
-          <br>
-          <div class="buttons">
-              <button type="submit">Guardar</button>
-              <a href="/" type="button">Cancelar</a>
-          </div>
+        <h1>Agregar Menu</h1>
+        <form action="/guardar" method="POST" id="agregar-form">
+          <fieldset>
+            <div>
+              <label for="nom_menu">Nombre Menu</label>
+              <input type="text" id="nom_menu" name="nom_menu">
+            </div>
+            <br>
+            <div>
+              <label for="estacion">Estación</label>
+              <input type="text" id="estacion" name="estacion">
+            </div>
+            <br>
+            <div>
+              <label for="tipo_comida">Tipo</label>
+              <input type="text" id="tipo_comida" name="tipo_comida">
+            </div>
+            <br>
+            <div class="buttons agregar-btns">
+              <button type="submit" class="btn btn-primary btn-input">Guardar</button>
+              <a href="/admin" type="button">Cancelar</a>
+            </div>
+          </fieldset>
         </form>
-      </div>    
+    </div>    
 
     <!-- Fin del login -->
 
